@@ -1,0 +1,206 @@
+[
+  {
+    "id": "R401",
+    "category": "row_count_paraphrase",
+    "task": "How many entries are there in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.8666,
+    "passed": true
+  },
+  {
+    "id": "R402",
+    "category": "row_count_paraphrase",
+    "task": "Tell me the number of rows inside customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.7225,
+    "passed": true
+  },
+  {
+    "id": "R403",
+    "category": "filter_paraphrase",
+    "task": "Fetch the Pune customer records from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.006,
+    "passed": true
+  },
+  {
+    "id": "R404",
+    "category": "filter_paraphrase",
+    "task": "Retrieve the Delhi entries in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0034,
+    "passed": true
+  },
+  {
+    "id": "R405",
+    "category": "ambiguous_filter",
+    "task": "Return rows that meet the criteria in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0032,
+    "passed": true
+  },
+  {
+    "id": "R406",
+    "category": "ambiguous_filter",
+    "task": "Show records matching the condition in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0027,
+    "passed": true
+  },
+  {
+    "id": "R407",
+    "category": "unsupported_upload",
+    "task": "Place customers.csv into an AWS S3 bucket.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0021,
+    "passed": true
+  },
+  {
+    "id": "R408",
+    "category": "unsupported_upload",
+    "task": "Store customers.csv in cloud storage.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.002,
+    "passed": true
+  },
+  {
+    "id": "R409",
+    "category": "unsupported_visualization",
+    "task": "Draw a histogram showing customer ages from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0025,
+    "passed": true
+  },
+  {
+    "id": "R410",
+    "category": "unsupported_visualization",
+    "task": "Visualize premium distribution from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0024,
+    "passed": true
+  },
+  {
+    "id": "R411",
+    "category": "unsupported_combine",
+    "task": "Combine customers.csv with another dataset using customer_id.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0022,
+    "passed": true
+  },
+  {
+    "id": "R412",
+    "category": "unsupported_combine",
+    "task": "Append another customer CSV to customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.002,
+    "passed": true
+  }
+]

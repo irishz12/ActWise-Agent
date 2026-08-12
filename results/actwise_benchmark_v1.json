@@ -1,0 +1,180 @@
+[
+  {
+    "id": "S01",
+    "task": "In customers.csv, find duplicate customer IDs and tell me the average premium.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "executed_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "required_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0071
+  },
+  {
+    "id": "S02",
+    "task": "What is the average premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0025
+  },
+  {
+    "id": "S03",
+    "task": "Show me all customers from Kolkata in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "required_tools": [
+      "filter_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0038
+  },
+  {
+    "id": "S04",
+    "task": "Show me the first 3 rows of customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "executed_tools": [
+      "preview_rows"
+    ],
+    "required_tools": [
+      "preview_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.003
+  },
+  {
+    "id": "S05",
+    "task": "What columns are available in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0024
+  },
+  {
+    "id": "S06",
+    "task": "Calculate a summary for customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.8303
+  },
+  {
+    "id": "S07",
+    "task": "Tell me the row count and columns in missing.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0055
+  },
+  {
+    "id": "S08",
+    "task": "Send customers.csv to my manager by email.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "executed_tools": [],
+    "required_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0037
+  },
+  {
+    "id": "S09",
+    "task": "Find duplicate customer IDs in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "executed_tools": [
+      "find_duplicates"
+    ],
+    "required_tools": [
+      "find_duplicates"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.004
+  },
+  {
+    "id": "S10",
+    "task": "Create a report for customers.csv named evaluation_report.txt.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "executed_tools": [
+      "create_report"
+    ],
+    "required_tools": [
+      "create_report"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0037
+  }
+]

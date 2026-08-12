@@ -1,0 +1,285 @@
+[
+  {
+    "id": "V201",
+    "category": "direct_complete",
+    "task": "What is the average premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V202",
+    "category": "direct_complete",
+    "task": "What is the total premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V203",
+    "category": "direct_complete",
+    "task": "What is the minimum age in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V204",
+    "category": "direct_complete",
+    "task": "What is the maximum premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V205",
+    "category": "direct_complete",
+    "task": "Find duplicate customer IDs in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates"]
+  },
+  {
+    "id": "V206",
+    "category": "direct_complete",
+    "task": "Show me the first 4 rows of customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["preview_rows"]
+  },
+  {
+    "id": "V207",
+    "category": "direct_complete",
+    "task": "What columns are available in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V208",
+    "category": "direct_complete",
+    "task": "What is the row count of customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V209",
+    "category": "direct_complete",
+    "task": "Show records where city is Pune in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "V210",
+    "category": "direct_complete",
+    "task": "Show records where city is Chennai in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "V211",
+    "category": "direct_complete",
+    "task": "Create a report for customers.csv named customer_analysis.txt.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["create_report"]
+  },
+  {
+    "id": "V212",
+    "category": "multi_operation",
+    "task": "Find duplicate customer IDs and calculate the average age in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates", "calculate_summary"]
+  },
+
+  {
+    "id": "V213",
+    "category": "paraphrase",
+    "task": "Which customer IDs appear more than once in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates"]
+  },
+  {
+    "id": "V214",
+    "category": "paraphrase",
+    "task": "Give me two sample records from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["preview_rows"]
+  },
+  {
+    "id": "V215",
+    "category": "paraphrase",
+    "task": "Which fields are present inside customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V216",
+    "category": "paraphrase",
+    "task": "Only return records whose city equals Delhi in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "V217",
+    "category": "paraphrase",
+    "task": "Tell me the mean age in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V218",
+    "category": "paraphrase",
+    "task": "What is the highest premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V219",
+    "category": "paraphrase",
+    "task": "What is the lowest age in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V220",
+    "category": "paraphrase",
+    "task": "Show me customers from Mumbai in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+
+  {
+    "id": "V221",
+    "category": "clarify",
+    "task": "Calculate a summary for customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V222",
+    "category": "clarify",
+    "task": "What is the average in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V223",
+    "category": "clarify",
+    "task": "Calculate the total in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V224",
+    "category": "clarify",
+    "task": "Filter customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V225",
+    "category": "clarify",
+    "task": "Show me matching customers in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V226",
+    "category": "clarify",
+    "task": "Find duplicates in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V227",
+    "category": "clarify",
+    "task": "Give me a summary of a numeric column in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V228",
+    "category": "clarify",
+    "task": "Calculate either the premium or age summary in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V229",
+    "category": "invalid_column",
+    "task": "What is the average salary in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["calculate_summary"]
+  },
+
+  {
+    "id": "V230",
+    "category": "abstain_missing_file",
+    "task": "Tell me the row count and columns in missing.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "V231",
+    "category": "abstain_missing_file",
+    "task": "What is the average premium in missing.csv?",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "V232",
+    "category": "unsupported_action",
+    "task": "Send customers.csv to my manager by email.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V233",
+    "category": "unsupported_action",
+    "task": "Delete the duplicate customers from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V234",
+    "category": "unsupported_action",
+    "task": "Change the premium of CUST001 to 50000 in customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V235",
+    "category": "unsupported_action",
+    "task": "Upload customers.csv to Amazon S3.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V236",
+    "category": "unsupported_action",
+    "task": "Create a bar chart of premium by city from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V237",
+    "category": "unsupported_action",
+    "task": "Join customers.csv with policies.csv using customer_id.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V238",
+    "category": "unsupported_action",
+    "task": "Sort customers.csv by premium and save it as sorted_customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V239",
+    "category": "unsupported_action",
+    "task": "Rename customers.csv to clients.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "V240",
+    "category": "unsupported_composite",
+    "task": "Show customers from Kolkata and calculate their average premium in customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["filter_rows"]
+  }
+]

@@ -1,0 +1,345 @@
+[
+  {
+    "id": "H01",
+    "category": "paraphrase",
+    "task": "Which customer IDs show up repeatedly in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "find_duplicates"
+    ],
+    "executed_tools": [
+      "find_duplicates"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0071,
+    "passed": true
+  },
+  {
+    "id": "H02",
+    "category": "paraphrase",
+    "task": "How many records does customers.csv contain?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 2.2558,
+    "passed": true
+  },
+  {
+    "id": "H03",
+    "category": "paraphrase",
+    "task": "Give me the mean premium from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0094,
+    "passed": true
+  },
+  {
+    "id": "H04",
+    "category": "paraphrase",
+    "task": "Pull out the Bangalore entries from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "latency_seconds": 3.6936,
+    "passed": false
+  },
+  {
+    "id": "H05",
+    "category": "paraphrase",
+    "task": "Show five example rows from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [
+      "preview_rows"
+    ],
+    "executed_tools": [],
+    "decision_correct": false,
+    "required_tools_found": false,
+    "extra_tools": [],
+    "latency_seconds": 13.6349,
+    "passed": false
+  },
+  {
+    "id": "H06",
+    "category": "paraphrase",
+    "task": "What attributes are stored in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 8.3926,
+    "passed": true
+  },
+  {
+    "id": "H07",
+    "category": "multi_operation",
+    "task": "Tell me which customer IDs are repeated and the total premium in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0112,
+    "passed": true
+  },
+  {
+    "id": "H08",
+    "category": "clarify",
+    "task": "What's the average?",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 36.7092,
+    "passed": false
+  },
+  {
+    "id": "H09",
+    "category": "clarify",
+    "task": "Find repeated values in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0105,
+    "passed": true
+  },
+  {
+    "id": "H10",
+    "category": "clarify",
+    "task": "Show only the matching rows from customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0056,
+    "passed": true
+  },
+  {
+    "id": "H11",
+    "category": "clarify",
+    "task": "Give me the maximum from customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0048,
+    "passed": true
+  },
+  {
+    "id": "H12",
+    "category": "clarify",
+    "task": "Create a report.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "COMPLETE",
+    "required_tools": [],
+    "executed_tools": [
+      "list_files",
+      "create_report"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "list_files",
+      "create_report"
+    ],
+    "latency_seconds": 21.5938,
+    "passed": false
+  },
+  {
+    "id": "H13",
+    "category": "unsupported",
+    "task": "Email me a summary of customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.006,
+    "passed": true
+  },
+  {
+    "id": "H14",
+    "category": "unsupported",
+    "task": "Remove every Delhi customer from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0045,
+    "passed": true
+  },
+  {
+    "id": "H15",
+    "category": "unsupported",
+    "task": "Upload customers.csv to my cloud storage.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.004,
+    "passed": true
+  },
+  {
+    "id": "H16",
+    "category": "unsupported",
+    "task": "Make a pie chart of customers by city from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0051,
+    "passed": true
+  },
+  {
+    "id": "H17",
+    "category": "unsupported",
+    "task": "Merge customers.csv with another customer dataset.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0205,
+    "passed": true
+  },
+  {
+    "id": "H18",
+    "category": "capability_boundary",
+    "task": "Show Pune customers and tell me their average age from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": false,
+    "required_tools_found": false,
+    "extra_tools": [
+      "calculate_summary"
+    ],
+    "latency_seconds": 0.0051,
+    "passed": false
+  },
+  {
+    "id": "H19",
+    "category": "missing_file",
+    "task": "Tell me the total premium in unknown.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0045,
+    "passed": true
+  },
+  {
+    "id": "H20",
+    "category": "invalid_column",
+    "task": "What is the average income in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "latency_seconds": 0.0041,
+    "passed": true
+  }
+]

@@ -1,0 +1,11 @@
+id,task,expected_decision,actwise_decision,decision_correct,baseline_tool_calls,actwise_tool_calls,tool_calls_saved,baseline_extra_tools,actwise_extra_tools,baseline_required_tools_found,actwise_required_tools_found,baseline_latency_seconds,actwise_latency_seconds,skipped_calls
+S01,"In customers.csv, find duplicate customer IDs and tell me the average premium.",COMPLETE,COMPLETE,True,3,2,1,1,0,True,True,2.943,9.424,3
+S02,What is the average premium in customers.csv?,COMPLETE,COMPLETE,True,3,1,2,2,0,True,True,13.411,9.263,0
+S03,Show me all customers from Kolkata in customers.csv.,COMPLETE,COMPLETE,True,2,1,1,1,0,True,True,11.422,29.394,2
+S04,Show me the first 3 rows of customers.csv.,COMPLETE,COMPLETE,True,1,1,0,0,0,True,True,7.763,12.501,0
+S05,What columns are available in customers.csv?,COMPLETE,COMPLETE,True,1,1,0,0,0,True,True,6.662,7.991,0
+S06,Calculate a summary for customers.csv.,CLARIFY,CLARIFY,True,3,1,2,2,0,True,True,13.104,3.702,0
+S07,Tell me the row count and columns in missing.csv.,ABSTAIN,ABSTAIN,True,1,1,0,1,0,False,True,6.436,44.958,1
+S08,Send customers.csv to my manager by email.,ABSTAIN,ABSTAIN,True,0,0,0,0,0,True,True,3.99,6.837,1
+S09,Find duplicate customer IDs in customers.csv.,COMPLETE,COMPLETE,True,2,1,1,1,0,True,True,8.624,37.486,3
+S10,Create a report for customers.csv named evaluation_report.txt.,COMPLETE,COMPLETE,True,1,1,0,0,0,True,True,8.697,7.171,0

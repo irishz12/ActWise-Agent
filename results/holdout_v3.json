@@ -1,0 +1,358 @@
+[
+  {
+    "id": "HV301",
+    "category": "paraphrase",
+    "task": "Which customer IDs are duplicated across customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "find_duplicates"
+    ],
+    "executed_tools": [
+      "find_duplicates"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0121,
+    "passed": true
+  },
+  {
+    "id": "HV302",
+    "category": "paraphrase",
+    "task": "Count the rows available in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 3.4384,
+    "passed": true
+  },
+  {
+    "id": "HV303",
+    "category": "paraphrase",
+    "task": "Tell me the average age from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0066,
+    "passed": true
+  },
+  {
+    "id": "HV304",
+    "category": "paraphrase",
+    "task": "Retrieve all Hyderabad entries from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0031,
+    "passed": true
+  },
+  {
+    "id": "HV305",
+    "category": "paraphrase",
+    "task": "Display four sample rows from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "preview_rows"
+    ],
+    "executed_tools": [
+      "preview_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0043,
+    "passed": true
+  },
+  {
+    "id": "HV306",
+    "category": "paraphrase",
+    "task": "Describe the fields available in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.003,
+    "passed": true
+  },
+  {
+    "id": "HV307",
+    "category": "multi_operation",
+    "task": "Find repeated customer IDs and give me the minimum premium in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0029,
+    "passed": true
+  },
+  {
+    "id": "HV308",
+    "category": "clarify",
+    "task": "Calculate the minimum.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0024,
+    "passed": true
+  },
+  {
+    "id": "HV309",
+    "category": "clarify",
+    "task": "Check customers.csv for repeated data.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0037,
+    "passed": true
+  },
+  {
+    "id": "HV310",
+    "category": "clarify",
+    "task": "Give me the rows that match my criteria in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0031,
+    "passed": true
+  },
+  {
+    "id": "HV311",
+    "category": "clarify",
+    "task": "What is the highest number in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": false,
+    "extra_tools": [
+      "calculate_summary"
+    ],
+    "planning_steps": 1,
+    "latency_seconds": 0.0039,
+    "passed": false
+  },
+  {
+    "id": "HV312",
+    "category": "clarify",
+    "task": "Build a report from the data.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0026,
+    "passed": true
+  },
+  {
+    "id": "HV313",
+    "category": "unsupported",
+    "task": "Forward customers.csv by email.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0024,
+    "passed": true
+  },
+  {
+    "id": "HV314",
+    "category": "unsupported",
+    "task": "Remove all Chennai records from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0025,
+    "passed": true
+  },
+  {
+    "id": "HV315",
+    "category": "unsupported",
+    "task": "Copy customers.csv into cloud storage.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0023,
+    "passed": true
+  },
+  {
+    "id": "HV316",
+    "category": "unsupported",
+    "task": "Plot the premium distribution from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0021,
+    "passed": true
+  },
+  {
+    "id": "HV317",
+    "category": "unsupported",
+    "task": "Append another dataset to customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0029,
+    "passed": true
+  },
+  {
+    "id": "HV318",
+    "category": "capability_boundary",
+    "task": "Retrieve Kolkata customers and compute their average age from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0026,
+    "passed": true
+  },
+  {
+    "id": "HV319",
+    "category": "missing_file",
+    "task": "Calculate the mean premium in absent.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.0034,
+    "passed": true
+  },
+  {
+    "id": "HV320",
+    "category": "invalid_column",
+    "task": "Tell me the average revenue in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.003,
+    "passed": true
+  }
+]

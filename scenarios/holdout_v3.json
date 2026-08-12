@@ -1,0 +1,146 @@
+[
+  {
+    "id": "HV301",
+    "category": "paraphrase",
+    "task": "Which customer IDs are duplicated across customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates"]
+  },
+  {
+    "id": "HV302",
+    "category": "paraphrase",
+    "task": "Count the rows available in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV303",
+    "category": "paraphrase",
+    "task": "Tell me the average age from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "HV304",
+    "category": "paraphrase",
+    "task": "Retrieve all Hyderabad entries from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "HV305",
+    "category": "paraphrase",
+    "task": "Display four sample rows from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["preview_rows"]
+  },
+  {
+    "id": "HV306",
+    "category": "paraphrase",
+    "task": "Describe the fields available in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+
+  {
+    "id": "HV307",
+    "category": "multi_operation",
+    "task": "Find repeated customer IDs and give me the minimum premium in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates", "calculate_summary"]
+  },
+
+  {
+    "id": "HV308",
+    "category": "clarify",
+    "task": "Calculate the minimum.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+  {
+    "id": "HV309",
+    "category": "clarify",
+    "task": "Check customers.csv for repeated data.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV310",
+    "category": "clarify",
+    "task": "Give me the rows that match my criteria in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV311",
+    "category": "clarify",
+    "task": "What is the highest number in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV312",
+    "category": "clarify",
+    "task": "Build a report from the data.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+
+  {
+    "id": "HV313",
+    "category": "unsupported",
+    "task": "Forward customers.csv by email.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV314",
+    "category": "unsupported",
+    "task": "Remove all Chennai records from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV315",
+    "category": "unsupported",
+    "task": "Copy customers.csv into cloud storage.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV316",
+    "category": "unsupported",
+    "task": "Plot the premium distribution from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV317",
+    "category": "unsupported",
+    "task": "Append another dataset to customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+
+  {
+    "id": "HV318",
+    "category": "capability_boundary",
+    "task": "Retrieve Kolkata customers and compute their average age from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "HV319",
+    "category": "missing_file",
+    "task": "Calculate the mean premium in absent.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "HV320",
+    "category": "invalid_column",
+    "task": "Tell me the average revenue in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["calculate_summary"]
+  }
+]

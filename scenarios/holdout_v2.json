@@ -1,0 +1,145 @@
+[
+  {
+    "id": "HV201",
+    "category": "paraphrase",
+    "task": "Can you identify customer IDs that occur multiple times in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates"]
+  },
+  {
+    "id": "HV202",
+    "category": "paraphrase",
+    "task": "Tell me how many rows are stored in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV203",
+    "category": "paraphrase",
+    "task": "What is the mean age of the records in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "HV204",
+    "category": "paraphrase",
+    "task": "Fetch the Mumbai customer records in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "HV205",
+    "category": "paraphrase",
+    "task": "Let me see two example rows from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["preview_rows"]
+  },
+  {
+    "id": "HV206",
+    "category": "paraphrase",
+    "task": "What information fields exist in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV207",
+    "category": "multi_operation",
+    "task": "Check repeated customer IDs and also tell me the maximum premium in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates", "calculate_summary"]
+  },
+
+  {
+    "id": "HV208",
+    "category": "clarify",
+    "task": "Please calculate the total.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+  {
+    "id": "HV209",
+    "category": "clarify",
+    "task": "Check for repeated entries in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV210",
+    "category": "clarify",
+    "task": "Return the records that satisfy the condition in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV211",
+    "category": "clarify",
+    "task": "What is the lowest value in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "HV212",
+    "category": "clarify",
+    "task": "Prepare a report for this data.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+
+  {
+    "id": "HV213",
+    "category": "unsupported",
+    "task": "Send customers.csv to someone through email.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV214",
+    "category": "unsupported",
+    "task": "Erase all Pune records from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV215",
+    "category": "unsupported",
+    "task": "Put customers.csv into an S3 bucket.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV216",
+    "category": "unsupported",
+    "task": "Visualize customer ages as a histogram from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "HV217",
+    "category": "unsupported",
+    "task": "Combine customers.csv with another CSV using customer_id.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+
+  {
+    "id": "HV218",
+    "category": "capability_boundary",
+    "task": "Get Bangalore customers and calculate their average premium from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "HV219",
+    "category": "missing_file",
+    "task": "What is the maximum premium in unavailable.csv?",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "HV220",
+    "category": "invalid_column",
+    "task": "Calculate the mean balance in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["calculate_summary"]
+  }
+]

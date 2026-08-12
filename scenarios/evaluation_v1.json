@@ -1,0 +1,62 @@
+[
+  {
+    "id": "S01",
+    "task": "In customers.csv, find duplicate customer IDs and tell me the average premium.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates", "calculate_summary"]
+  },
+  {
+    "id": "S02",
+    "task": "What is the average premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["calculate_summary"]
+  },
+  {
+    "id": "S03",
+    "task": "Show me all customers from Kolkata in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "S04",
+    "task": "Show me the first 3 rows of customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["preview_rows"]
+  },
+  {
+    "id": "S05",
+    "task": "What columns are available in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "S06",
+    "task": "Calculate a summary for customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "S07",
+    "task": "Tell me the row count and columns in missing.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "S08",
+    "task": "Send customers.csv to my manager by email.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "S09",
+    "task": "Find duplicate customer IDs in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["find_duplicates"]
+  },
+  {
+    "id": "S10",
+    "task": "Create a report for customers.csv named evaluation_report.txt.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["create_report"]
+  }
+]

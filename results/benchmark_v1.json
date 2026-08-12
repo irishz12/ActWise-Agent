@@ -1,0 +1,237 @@
+[
+  {
+    "id": "S01",
+    "task": "In customers.csv, find duplicate customer IDs and tell me the average premium.",
+    "expected_decision": "COMPLETE",
+    "actwise_decision": "COMPLETE",
+    "decision_correct": true,
+    "baseline_tool_calls": 3,
+    "actwise_tool_calls": 2,
+    "tool_calls_saved": 1,
+    "baseline_extra_tools": 1,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 2.943,
+    "actwise_latency_seconds": 9.424,
+    "baseline_tools": [
+      "inspect_csv",
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "actwise_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "skipped_calls": 3
+  },
+  {
+    "id": "S02",
+    "task": "What is the average premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actwise_decision": "COMPLETE",
+    "decision_correct": true,
+    "baseline_tool_calls": 3,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 2,
+    "baseline_extra_tools": 2,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 13.411,
+    "actwise_latency_seconds": 9.263,
+    "baseline_tools": [
+      "list_files",
+      "inspect_csv",
+      "calculate_summary"
+    ],
+    "actwise_tools": [
+      "calculate_summary"
+    ],
+    "skipped_calls": 0
+  },
+  {
+    "id": "S03",
+    "task": "Show me all customers from Kolkata in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actwise_decision": "COMPLETE",
+    "decision_correct": true,
+    "baseline_tool_calls": 2,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 1,
+    "baseline_extra_tools": 1,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 11.422,
+    "actwise_latency_seconds": 29.394,
+    "baseline_tools": [
+      "inspect_csv",
+      "filter_rows"
+    ],
+    "actwise_tools": [
+      "filter_rows"
+    ],
+    "skipped_calls": 2
+  },
+  {
+    "id": "S04",
+    "task": "Show me the first 3 rows of customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actwise_decision": "COMPLETE",
+    "decision_correct": true,
+    "baseline_tool_calls": 1,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 0,
+    "baseline_extra_tools": 0,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 7.763,
+    "actwise_latency_seconds": 12.501,
+    "baseline_tools": [
+      "preview_rows"
+    ],
+    "actwise_tools": [
+      "preview_rows"
+    ],
+    "skipped_calls": 0
+  },
+  {
+    "id": "S05",
+    "task": "What columns are available in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actwise_decision": "COMPLETE",
+    "decision_correct": true,
+    "baseline_tool_calls": 1,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 0,
+    "baseline_extra_tools": 0,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 6.662,
+    "actwise_latency_seconds": 7.991,
+    "baseline_tools": [
+      "inspect_csv"
+    ],
+    "actwise_tools": [
+      "inspect_csv"
+    ],
+    "skipped_calls": 0
+  },
+  {
+    "id": "S06",
+    "task": "Calculate a summary for customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actwise_decision": "CLARIFY",
+    "decision_correct": true,
+    "baseline_tool_calls": 3,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 2,
+    "baseline_extra_tools": 2,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 13.104,
+    "actwise_latency_seconds": 3.702,
+    "baseline_tools": [
+      "inspect_csv",
+      "calculate_summary",
+      "calculate_summary"
+    ],
+    "actwise_tools": [
+      "inspect_csv"
+    ],
+    "skipped_calls": 0
+  },
+  {
+    "id": "S07",
+    "task": "Tell me the row count and columns in missing.csv.",
+    "expected_decision": "ABSTAIN",
+    "actwise_decision": "ABSTAIN",
+    "decision_correct": true,
+    "baseline_tool_calls": 1,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 0,
+    "baseline_extra_tools": 1,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": false,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 6.436,
+    "actwise_latency_seconds": 44.958,
+    "baseline_tools": [
+      "list_files"
+    ],
+    "actwise_tools": [
+      "inspect_csv"
+    ],
+    "skipped_calls": 1
+  },
+  {
+    "id": "S08",
+    "task": "Send customers.csv to my manager by email.",
+    "expected_decision": "ABSTAIN",
+    "actwise_decision": "ABSTAIN",
+    "decision_correct": true,
+    "baseline_tool_calls": 0,
+    "actwise_tool_calls": 0,
+    "tool_calls_saved": 0,
+    "baseline_extra_tools": 0,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 3.99,
+    "actwise_latency_seconds": 6.837,
+    "baseline_tools": [],
+    "actwise_tools": [],
+    "skipped_calls": 1
+  },
+  {
+    "id": "S09",
+    "task": "Find duplicate customer IDs in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actwise_decision": "COMPLETE",
+    "decision_correct": true,
+    "baseline_tool_calls": 2,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 1,
+    "baseline_extra_tools": 1,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 8.624,
+    "actwise_latency_seconds": 37.486,
+    "baseline_tools": [
+      "inspect_csv",
+      "find_duplicates"
+    ],
+    "actwise_tools": [
+      "find_duplicates"
+    ],
+    "skipped_calls": 3
+  },
+  {
+    "id": "S10",
+    "task": "Create a report for customers.csv named evaluation_report.txt.",
+    "expected_decision": "COMPLETE",
+    "actwise_decision": "COMPLETE",
+    "decision_correct": true,
+    "baseline_tool_calls": 1,
+    "actwise_tool_calls": 1,
+    "tool_calls_saved": 0,
+    "baseline_extra_tools": 0,
+    "actwise_extra_tools": 0,
+    "baseline_required_tools_found": true,
+    "actwise_required_tools_found": true,
+    "baseline_latency_seconds": 8.697,
+    "actwise_latency_seconds": 7.171,
+    "baseline_tools": [
+      "create_report"
+    ],
+    "actwise_tools": [
+      "create_report"
+    ],
+    "skipped_calls": 0
+  }
+]

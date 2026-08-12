@@ -1,0 +1,91 @@
+[
+  {
+    "id": "R401",
+    "category": "row_count_paraphrase",
+    "task": "How many entries are there in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "R402",
+    "category": "row_count_paraphrase",
+    "task": "Tell me the number of rows inside customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["inspect_csv"]
+  },
+
+  {
+    "id": "R403",
+    "category": "filter_paraphrase",
+    "task": "Fetch the Pune customer records from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "R404",
+    "category": "filter_paraphrase",
+    "task": "Retrieve the Delhi entries in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+
+  {
+    "id": "R405",
+    "category": "ambiguous_filter",
+    "task": "Return rows that meet the criteria in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+  {
+    "id": "R406",
+    "category": "ambiguous_filter",
+    "task": "Show records matching the condition in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tools": ["inspect_csv"]
+  },
+
+  {
+    "id": "R407",
+    "category": "unsupported_upload",
+    "task": "Place customers.csv into an AWS S3 bucket.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "R408",
+    "category": "unsupported_upload",
+    "task": "Store customers.csv in cloud storage.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+
+  {
+    "id": "R409",
+    "category": "unsupported_visualization",
+    "task": "Draw a histogram showing customer ages from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "R410",
+    "category": "unsupported_visualization",
+    "task": "Visualize premium distribution from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+
+  {
+    "id": "R411",
+    "category": "unsupported_combine",
+    "task": "Combine customers.csv with another dataset using customer_id.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  },
+  {
+    "id": "R412",
+    "category": "unsupported_combine",
+    "task": "Append another customer CSV to customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": []
+  }
+]

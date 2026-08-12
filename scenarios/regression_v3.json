@@ -1,0 +1,76 @@
+[
+  {
+    "id": "R301",
+    "category": "filter_paraphrase",
+    "task": "Get the Delhi entries in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "R302",
+    "category": "filter_paraphrase",
+    "task": "Return the Chennai customers in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["filter_rows"]
+  },
+
+  {
+    "id": "R303",
+    "category": "preview_paraphrase",
+    "task": "Give me four example records from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["preview_rows"]
+  },
+  {
+    "id": "R304",
+    "category": "preview_paraphrase",
+    "task": "Show three example entries from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tools": ["preview_rows"]
+  },
+
+  {
+    "id": "R305",
+    "category": "missing_context",
+    "task": "Calculate the mean.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+  {
+    "id": "R306",
+    "category": "missing_context",
+    "task": "Tell me the maximum value.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+
+  {
+    "id": "R307",
+    "category": "report_missing_file",
+    "task": "Generate a report for me.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+  {
+    "id": "R308",
+    "category": "report_missing_file",
+    "task": "Create a summary report.",
+    "expected_decision": "CLARIFY",
+    "required_tools": []
+  },
+
+  {
+    "id": "R309",
+    "category": "filtered_aggregate",
+    "task": "Show Delhi customers and calculate their average age from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["filter_rows"]
+  },
+  {
+    "id": "R310",
+    "category": "filtered_aggregate",
+    "task": "For Chennai customers, tell me the average premium in customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tools": ["filter_rows"]
+  }
+]

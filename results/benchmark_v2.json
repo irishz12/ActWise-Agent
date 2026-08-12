@@ -1,0 +1,852 @@
+[
+  {
+    "id": "V201",
+    "category": "direct_complete",
+    "task": "What is the average premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0058,
+    "passed": true,
+    "answer": "**Average premium:** 32,700",
+    "error": null
+  },
+  {
+    "id": "V202",
+    "category": "direct_complete",
+    "task": "What is the total premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0029,
+    "passed": true,
+    "answer": "**Summary for `premium`**\n- Count: 10\n- Total: 327,000\n- Average: 32,700\n- Minimum: 22,000\n- Maximum: 50,000",
+    "error": null
+  },
+  {
+    "id": "V203",
+    "category": "direct_complete",
+    "task": "What is the minimum age in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0021,
+    "passed": true,
+    "answer": "**Summary for `age`**\n- Count: 10\n- Total: 346\n- Average: 34.60\n- Minimum: 27\n- Maximum: 45",
+    "error": null
+  },
+  {
+    "id": "V204",
+    "category": "direct_complete",
+    "task": "What is the maximum premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0022,
+    "passed": true,
+    "answer": "**Summary for `premium`**\n- Count: 10\n- Total: 327,000\n- Average: 32,700\n- Minimum: 22,000\n- Maximum: 50,000",
+    "error": null
+  },
+  {
+    "id": "V205",
+    "category": "direct_complete",
+    "task": "Find duplicate customer IDs in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "find_duplicates"
+    ],
+    "executed_tools": [
+      "find_duplicates"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0022,
+    "passed": true,
+    "answer": "**Duplicate values**\n- **CUST002** \u2014 2 occurrences\n- **CUST003** \u2014 2 occurrences",
+    "error": null
+  },
+  {
+    "id": "V206",
+    "category": "direct_complete",
+    "task": "Show me the first 4 rows of customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "preview_rows"
+    ],
+    "executed_tools": [
+      "preview_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0022,
+    "passed": true,
+    "answer": "**First 4 rows of customers.csv**\n1. customer_id=CUST001, name=Amit Sharma, age=34, city=Mumbai, premium=25000\n2. customer_id=CUST002, name=Priya Nair, age=29, city=Bangalore, premium=32000\n3. customer_id=CUST003, name=Rahul Das, age=41, city=Kolkata, premium=28000\n4. customer_id=CUST004, name=Neha Singh, age=36, city=Delhi, premium=45000",
+    "error": null
+  },
+  {
+    "id": "V207",
+    "category": "direct_complete",
+    "task": "What columns are available in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0024,
+    "passed": true,
+    "answer": "**customers.csv**\n- Rows: 10\n- Columns: customer_id, name, age, city, premium",
+    "error": null
+  },
+  {
+    "id": "V208",
+    "category": "direct_complete",
+    "task": "What is the row count of customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0021,
+    "passed": true,
+    "answer": "**customers.csv**\n- Rows: 10\n- Columns: customer_id, name, age, city, premium",
+    "error": null
+  },
+  {
+    "id": "V209",
+    "category": "direct_complete",
+    "task": "Show records where city is Pune in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0021,
+    "passed": true,
+    "answer": "**Matches: 0**",
+    "error": null
+  },
+  {
+    "id": "V210",
+    "category": "direct_complete",
+    "task": "Show records where city is Chennai in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0022,
+    "passed": true,
+    "answer": "**Matches: 0**",
+    "error": null
+  },
+  {
+    "id": "V211",
+    "category": "direct_complete",
+    "task": "Create a report for customers.csv named customer_analysis.txt.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "create_report"
+    ],
+    "executed_tools": [
+      "create_report"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0025,
+    "passed": true,
+    "answer": "**Report created**\n- File: customer_analysis.txt\n- Path: workspace/customer_analysis.txt",
+    "error": null
+  },
+  {
+    "id": "V212",
+    "category": "multi_operation",
+    "task": "Find duplicate customer IDs and calculate the average age in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.002,
+    "passed": true,
+    "answer": "**Duplicate values**\n- **CUST002** \u2014 2 occurrences\n- **CUST003** \u2014 2 occurrences\n\n**Average age:** 34.60",
+    "error": null
+  },
+  {
+    "id": "V213",
+    "category": "paraphrase",
+    "task": "Which customer IDs appear more than once in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "find_duplicates"
+    ],
+    "executed_tools": [
+      "find_duplicates"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0025,
+    "passed": true,
+    "answer": "**Duplicate values**\n- **CUST002** \u2014 2 occurrences\n- **CUST003** \u2014 2 occurrences",
+    "error": null
+  },
+  {
+    "id": "V214",
+    "category": "paraphrase",
+    "task": "Give me two sample records from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "preview_rows"
+    ],
+    "executed_tools": [
+      "preview_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0022,
+    "passed": true,
+    "answer": "**First 2 rows of customers.csv**\n1. customer_id=CUST001, name=Amit Sharma, age=34, city=Mumbai, premium=25000\n2. customer_id=CUST002, name=Priya Nair, age=29, city=Bangalore, premium=32000",
+    "error": null
+  },
+  {
+    "id": "V215",
+    "category": "paraphrase",
+    "task": "Which fields are present inside customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0023,
+    "passed": true,
+    "answer": "**customers.csv**\n- Rows: 10\n- Columns: customer_id, name, age, city, premium",
+    "error": null
+  },
+  {
+    "id": "V216",
+    "category": "paraphrase",
+    "task": "Only return records whose city equals Delhi in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.9776,
+    "passed": true,
+    "answer": "**Matches: 1**\n- customer_id=CUST004, name=Neha Singh, age=36, city=Delhi, premium=45000",
+    "error": null
+  },
+  {
+    "id": "V217",
+    "category": "paraphrase",
+    "task": "Tell me the mean age in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0046,
+    "passed": true,
+    "answer": "**Average age:** 34.60",
+    "error": null
+  },
+  {
+    "id": "V218",
+    "category": "paraphrase",
+    "task": "What is the highest premium in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0039,
+    "passed": true,
+    "answer": "**Summary for `premium`**\n- Count: 10\n- Total: 327,000\n- Average: 32,700\n- Minimum: 22,000\n- Maximum: 50,000",
+    "error": null
+  },
+  {
+    "id": "V219",
+    "category": "paraphrase",
+    "task": "What is the lowest age in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0032,
+    "passed": true,
+    "answer": "**Summary for `age`**\n- Count: 10\n- Total: 346\n- Average: 34.60\n- Minimum: 27\n- Maximum: 45",
+    "error": null
+  },
+  {
+    "id": "V220",
+    "category": "paraphrase",
+    "task": "Show me customers from Mumbai in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0032,
+    "passed": true,
+    "answer": "**Matches: 1**\n- customer_id=CUST001, name=Amit Sharma, age=34, city=Mumbai, premium=25000",
+    "error": null
+  },
+  {
+    "id": "V221",
+    "category": "clarify",
+    "task": "Calculate a summary for customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0034,
+    "passed": true,
+    "answer": "The user needs to specify one column to summarize.",
+    "error": null
+  },
+  {
+    "id": "V222",
+    "category": "clarify",
+    "task": "What is the average in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0032,
+    "passed": true,
+    "answer": "The user needs to specify one column to summarize.",
+    "error": null
+  },
+  {
+    "id": "V223",
+    "category": "clarify",
+    "task": "Calculate the total in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0029,
+    "passed": true,
+    "answer": "The user needs to specify one column to summarize.",
+    "error": null
+  },
+  {
+    "id": "V224",
+    "category": "clarify",
+    "task": "Filter customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0032,
+    "passed": true,
+    "answer": "The user needs to specify the filter column and value.",
+    "error": null
+  },
+  {
+    "id": "V225",
+    "category": "clarify",
+    "task": "Show me matching customers in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0028,
+    "passed": true,
+    "answer": "The user needs to specify the filter column and value.",
+    "error": null
+  },
+  {
+    "id": "V226",
+    "category": "clarify",
+    "task": "Find duplicates in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0025,
+    "passed": true,
+    "answer": "The user needs to specify which column should be checked for duplicates.",
+    "error": null
+  },
+  {
+    "id": "V227",
+    "category": "clarify",
+    "task": "Give me a summary of a numeric column in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0037,
+    "passed": true,
+    "answer": "The user needs to specify one column to summarize.",
+    "error": null
+  },
+  {
+    "id": "V228",
+    "category": "clarify",
+    "task": "Calculate either the premium or age summary in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0024,
+    "passed": true,
+    "answer": "The user needs to specify one column to summarize.",
+    "error": null
+  },
+  {
+    "id": "V229",
+    "category": "invalid_column",
+    "task": "What is the average salary in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0025,
+    "passed": true,
+    "answer": "The requested column was not found in the CSV.",
+    "error": null
+  },
+  {
+    "id": "V230",
+    "category": "abstain_missing_file",
+    "task": "Tell me the row count and columns in missing.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0021,
+    "passed": true,
+    "answer": "The requested file does not exist in the workspace.",
+    "error": null
+  },
+  {
+    "id": "V231",
+    "category": "abstain_missing_file",
+    "task": "What is the average premium in missing.csv?",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0021,
+    "passed": true,
+    "answer": "The requested file does not exist in the workspace.",
+    "error": null
+  },
+  {
+    "id": "V232",
+    "category": "unsupported_action",
+    "task": "Send customers.csv to my manager by email.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0014,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V233",
+    "category": "unsupported_action",
+    "task": "Delete the duplicate customers from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0015,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V234",
+    "category": "unsupported_action",
+    "task": "Change the premium of CUST001 to 50000 in customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0014,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V235",
+    "category": "unsupported_action",
+    "task": "Upload customers.csv to Amazon S3.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0015,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V236",
+    "category": "unsupported_action",
+    "task": "Create a bar chart of premium by city from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0014,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V237",
+    "category": "unsupported_action",
+    "task": "Join customers.csv with policies.csv using customer_id.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0014,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V238",
+    "category": "unsupported_action",
+    "task": "Sort customers.csv by premium and save it as sorted_customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0014,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V239",
+    "category": "unsupported_action",
+    "task": "Rename customers.csv to clients.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [],
+    "executed_tools": [],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0014,
+    "passed": true,
+    "answer": "The requested action is not supported by the available ActWise tools.",
+    "error": null
+  },
+  {
+    "id": "V240",
+    "category": "unsupported_composite",
+    "task": "Show customers from Kolkata and calculate their average premium in customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "required_tools_found": true,
+    "extra_tools": [],
+    "extra_tool_count": 0,
+    "planning_steps": 1,
+    "latency_seconds": 0.0018,
+    "passed": true,
+    "answer": "ActWise can filter the rows, but the current tools cannot calculate an aggregate only over that filtered subset.",
+    "error": null
+  }
+]
