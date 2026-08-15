@@ -11,6 +11,9 @@ from backend.tools import (
 )
 
 
+CUSTOMERS_CSV = Path("workspace/customers.csv")
+
+
 def run():
     print("\n1. LIST FILES")
     files = list_files()
@@ -60,7 +63,29 @@ def run():
     assert filtered["success"] is True
     assert filtered["match_count"] == 3
 
-    print("\n7. CREATE REPORT")
+    print("\n7. REPORT SAFETY: REJECT OVERWRITE OF SOURCE CSV")
+    original_csv_bytes = CUSTOMERS_CSV.read_bytes()
+
+    overwrite_attempt = create_report(
+        "customers.csv",
+        "customers.csv",
+    )
+    print(overwrite_attempt)
+    assert overwrite_attempt["success"] is False
+    assert overwrite_attempt["error"] == "invalid_report_type"
+    assert CUSTOMERS_CSV.read_bytes() == original_csv_bytes
+
+    print("\n8. REPORT SAFETY: REJECT NON-.TXT REPORT NAME")
+    non_txt_attempt = create_report(
+        "customers.csv",
+        "report.csv",
+    )
+    print(non_txt_attempt)
+    assert non_txt_attempt["success"] is False
+    assert non_txt_attempt["error"] == "invalid_report_type"
+    assert CUSTOMERS_CSV.read_bytes() == original_csv_bytes
+
+    print("\n9. CREATE REPORT")
     report = None
     try:
         report = create_report(
@@ -74,13 +99,13 @@ def run():
         if report is not None:
             Path(report["report_path"]).unlink(missing_ok=True)
 
-    print("\n8. TEST MISSING FILE")
+    print("\n10. TEST MISSING FILE")
     missing = inspect_csv("missing.csv")
     print(missing)
     assert missing["success"] is False
     assert missing["error"] == "file_not_found"
 
-    print("\n9. TEST INVALID COLUMN")
+    print("\n11. TEST INVALID COLUMN")
     invalid_column = calculate_summary("customers.csv", "salary")
     print(invalid_column)
     assert invalid_column["success"] is False
