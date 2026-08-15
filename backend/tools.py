@@ -246,6 +246,13 @@ def create_report(filename, report_name="summary_report.txt"):
             "filename": filename
         }
 
+    if Path(report_name).suffix.lower() != ".txt":
+        return {
+            "success": False,
+            "error": "invalid_report_type",
+            "report_name": report_name,
+        }
+
     with file_path.open("r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         rows = list(reader)
