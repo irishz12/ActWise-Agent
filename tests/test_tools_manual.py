@@ -20,7 +20,7 @@ def run():
     print(preview_rows("customers.csv", 3))
 
     print("\n4. FIND DUPLICATES")
-    print(find_duplicates("customers.csv"))
+    print(find_duplicates("customers.csv", "customer_id"))
 
     print("\n5. CALCULATE AGE SUMMARY")
     print(calculate_summary("customers.csv", "age"))

@@ -1,0 +1,201 @@
+[
+  {
+    "id": "R301",
+    "category": "filter_paraphrase",
+    "task": "Get the Delhi entries in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "planning_steps": 3,
+    "latency_seconds": 2.3772,
+    "passed": false
+  },
+  {
+    "id": "R302",
+    "category": "filter_paraphrase",
+    "task": "Return the Chennai customers in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "filter_rows",
+      "inspect_csv",
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "planning_steps": 4,
+    "latency_seconds": 2.6129,
+    "passed": false
+  },
+  {
+    "id": "R303",
+    "category": "preview_paraphrase",
+    "task": "Give me four example records from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "preview_rows"
+    ],
+    "executed_tools": [
+      "preview_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 2.1137,
+    "passed": true
+  },
+  {
+    "id": "R304",
+    "category": "preview_paraphrase",
+    "task": "Show three example entries from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "preview_rows"
+    ],
+    "executed_tools": [
+      "preview_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.7713,
+    "passed": true
+  },
+  {
+    "id": "R305",
+    "category": "missing_context",
+    "task": "Calculate the mean.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 1.297,
+    "passed": true
+  },
+  {
+    "id": "R306",
+    "category": "missing_context",
+    "task": "Tell me the maximum value.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 1.2503,
+    "passed": true
+  },
+  {
+    "id": "R307",
+    "category": "report_missing_file",
+    "task": "Generate a report for me.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [
+      "list_files"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "list_files"
+    ],
+    "planning_steps": 3,
+    "latency_seconds": 1.802,
+    "passed": false
+  },
+  {
+    "id": "R308",
+    "category": "report_missing_file",
+    "task": "Create a summary report.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [
+      "list_files"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "list_files"
+    ],
+    "planning_steps": 2,
+    "latency_seconds": 2.1832,
+    "passed": false
+  },
+  {
+    "id": "R309",
+    "category": "filtered_aggregate",
+    "task": "Show Delhi customers and calculate their average age from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "filter_rows",
+      "calculate_summary"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv",
+      "calculate_summary"
+    ],
+    "planning_steps": 5,
+    "latency_seconds": 4.1463,
+    "passed": false
+  },
+  {
+    "id": "R310",
+    "category": "filtered_aggregate",
+    "task": "For Chennai customers, tell me the average premium in customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "filter_rows",
+      "calculate_summary"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv",
+      "calculate_summary"
+    ],
+    "planning_steps": 4,
+    "latency_seconds": 2.2742,
+    "passed": false
+  }
+]

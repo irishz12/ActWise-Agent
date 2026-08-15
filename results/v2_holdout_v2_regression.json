@@ -1,0 +1,401 @@
+[
+  {
+    "id": "HV201",
+    "category": "paraphrase",
+    "task": "Can you identify customer IDs that occur multiple times in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "find_duplicates"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "find_duplicates"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "planning_steps": 3,
+    "latency_seconds": 1.859,
+    "passed": false
+  },
+  {
+    "id": "HV202",
+    "category": "paraphrase",
+    "task": "Tell me how many rows are stored in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 0.7991,
+    "passed": true
+  },
+  {
+    "id": "HV203",
+    "category": "paraphrase",
+    "task": "What is the mean age of the records in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "planning_steps": 3,
+    "latency_seconds": 1.6567,
+    "passed": false
+  },
+  {
+    "id": "HV204",
+    "category": "paraphrase",
+    "task": "Fetch the Mumbai customer records in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "filter_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "planning_steps": 3,
+    "latency_seconds": 1.6424,
+    "passed": false
+  },
+  {
+    "id": "HV205",
+    "category": "paraphrase",
+    "task": "Let me see two example rows from customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "preview_rows"
+    ],
+    "executed_tools": [
+      "preview_rows"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.5645,
+    "passed": true
+  },
+  {
+    "id": "HV206",
+    "category": "paraphrase",
+    "task": "What information fields exist in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.6899,
+    "passed": true
+  },
+  {
+    "id": "HV207",
+    "category": "multi_operation",
+    "task": "Check repeated customer IDs and also tell me the maximum premium in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "planning_steps": 3,
+    "latency_seconds": 2.4365,
+    "passed": false
+  },
+  {
+    "id": "HV208",
+    "category": "clarify",
+    "task": "Please calculate the total.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.6611,
+    "passed": true
+  },
+  {
+    "id": "HV209",
+    "category": "clarify",
+    "task": "Check for repeated entries in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "find_duplicates",
+      "find_duplicates"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "find_duplicates",
+      "find_duplicates"
+    ],
+    "planning_steps": 4,
+    "latency_seconds": 2.5584,
+    "passed": false
+  },
+  {
+    "id": "HV210",
+    "category": "clarify",
+    "task": "Return the records that satisfy the condition in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": false,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 1.3145,
+    "passed": false
+  },
+  {
+    "id": "HV211",
+    "category": "clarify",
+    "task": "What is the lowest value in customers.csv?",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "inspect_csv"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "calculate_summary"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "calculate_summary"
+    ],
+    "planning_steps": 4,
+    "latency_seconds": 2.1983,
+    "passed": false
+  },
+  {
+    "id": "HV212",
+    "category": "clarify",
+    "task": "Prepare a report for this data.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [
+      "list_files"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "list_files"
+    ],
+    "planning_steps": 2,
+    "latency_seconds": 1.7882,
+    "passed": false
+  },
+  {
+    "id": "HV213",
+    "category": "unsupported",
+    "task": "Send customers.csv to someone through email.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 1.7167,
+    "passed": true
+  },
+  {
+    "id": "HV214",
+    "category": "unsupported",
+    "task": "Erase all Pune records from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 1.3766,
+    "passed": true
+  },
+  {
+    "id": "HV215",
+    "category": "unsupported",
+    "task": "Put customers.csv into an S3 bucket.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 1.6846,
+    "passed": true
+  },
+  {
+    "id": "HV216",
+    "category": "unsupported",
+    "task": "Visualize customer ages as a histogram from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "required_tools": [],
+    "executed_tools": [
+      "inspect_csv",
+      "finish(decision=\"ABSTAIN\", message=\"I cannot create visualizations like histograms with the available tools. The tools I have access to are limited to CSV data analysis (inspecting files, calculating statistics, filtering rows, finding duplicates, and creating text reports), but do not include charting or plotting capabilities."
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv",
+      "finish(decision=\"ABSTAIN\", message=\"I cannot create visualizations like histograms with the available tools. The tools I have access to are limited to CSV data analysis (inspecting files, calculating statistics, filtering rows, finding duplicates, and creating text reports), but do not include charting or plotting capabilities."
+    ],
+    "planning_steps": 8,
+    "latency_seconds": 12.1394,
+    "passed": false
+  },
+  {
+    "id": "HV217",
+    "category": "unsupported",
+    "task": "Combine customers.csv with another CSV using customer_id.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "CLARIFY",
+    "required_tools": [],
+    "executed_tools": [
+      "list_files"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "list_files"
+    ],
+    "planning_steps": 2,
+    "latency_seconds": 2.36,
+    "passed": false
+  },
+  {
+    "id": "HV218",
+    "category": "capability_boundary",
+    "task": "Get Bangalore customers and calculate their average premium from customers.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "COMPLETE",
+    "required_tools": [
+      "filter_rows"
+    ],
+    "executed_tools": [
+      "inspect_csv",
+      "filter_rows",
+      "calculate_summary",
+      "preview_rows"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv",
+      "calculate_summary",
+      "preview_rows"
+    ],
+    "planning_steps": 6,
+    "latency_seconds": 4.2983,
+    "passed": false
+  },
+  {
+    "id": "HV219",
+    "category": "missing_file",
+    "task": "What is the maximum premium in unavailable.csv?",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary",
+      "list_files"
+    ],
+    "decision_correct": false,
+    "required_tools_found": true,
+    "extra_tools": [
+      "list_files"
+    ],
+    "planning_steps": 4,
+    "latency_seconds": 2.7099,
+    "passed": false
+  },
+  {
+    "id": "HV220",
+    "category": "invalid_column",
+    "task": "Calculate the mean balance in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "required_tools": [
+      "calculate_summary"
+    ],
+    "executed_tools": [
+      "calculate_summary",
+      "inspect_csv"
+    ],
+    "decision_correct": true,
+    "required_tools_found": true,
+    "extra_tools": [
+      "inspect_csv"
+    ],
+    "planning_steps": 3,
+    "latency_seconds": 1.5843,
+    "passed": false
+  }
+]
