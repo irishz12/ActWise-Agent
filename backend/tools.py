@@ -78,7 +78,7 @@ def preview_rows(filename, limit=5):
     }
 
 
-def find_duplicates(filename, column="customer_id"):
+def find_duplicates(filename, column):
     file_path = WORKSPACE / filename
 
     if not file_path.exists():

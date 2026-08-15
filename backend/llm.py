@@ -1,27 +1,25 @@
 import os
 
 from dotenv import load_dotenv
-from groq import Groq
+from openai import OpenAI
 
 
 load_dotenv()
 
-api_key = os.getenv("GROQ_API_KEY")
+BASE_URL = os.getenv("OPENAI_BASE_URL")
+API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL = os.getenv("ACTWISE_MODEL")
 
-if not api_key:
-    raise RuntimeError("GROQ_API_KEY is not set")
+if not BASE_URL:
+    raise RuntimeError("OPENAI_BASE_URL is not set")
 
-client = Groq(api_key=api_key)
+if not API_KEY:
+    raise RuntimeError("OPENAI_API_KEY is not set")
 
+if not MODEL:
+    raise RuntimeError("ACTWISE_MODEL is not set")
 
-def ask_model(prompt):
-    response = client.chat.completions.create(
-        model="openai/gpt-oss-120b",
-        messages=[
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0,
-        max_tokens=100,
-    )
-
-    return response.choices[0].message.content
+client = OpenAI(
+    base_url=BASE_URL,
+    api_key=API_KEY,
+)
