@@ -1,0 +1,535 @@
+[
+  {
+    "id": "AH01",
+    "category": "direct_single_tool",
+    "task": "What is the minimum premium recorded in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "calculate_summary",
+        "arguments": {
+          "column": "premium"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.5118,
+    "passed": true,
+    "answer": "The minimum premium recorded in customers.csv is 22,000.0.",
+    "error": null
+  },
+  {
+    "id": "AH02",
+    "category": "direct_single_tool",
+    "task": "List every file currently available in the workspace.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "list_files"
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "list_files"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.7018,
+    "passed": true,
+    "answer": "I've listed all 7 files currently available in the workspace: summary_report.txt, customers.csv, customer_analysis.txt, customer_report.txt, premium_distribution, evaluation_report.txt, and customer_summary_report.txt.",
+    "error": null
+  },
+  {
+    "id": "AH03",
+    "category": "explicit_column",
+    "task": "Find duplicate values in the city column of customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "find_duplicates",
+        "arguments": {
+          "column": "city"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "find_duplicates"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.5375,
+    "passed": true,
+    "answer": "Found duplicate values in the city column of customers.csv:\n\n- Bangalore: appears 2 times\n- Kolkata: appears 3 times\n\nTotal duplicate count: 2 (unique cities with duplicates)",
+    "error": null
+  },
+  {
+    "id": "AH04",
+    "category": "explicit_column",
+    "task": "Filter customers.csv where premium equals 32000.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "filter_rows",
+        "arguments": {
+          "column": "premium",
+          "value": "32000"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 2.251,
+    "passed": true,
+    "answer": "Filtered customers.csv where premium equals 32000. Found 2 matching rows (both for customer Priya Nair, age 29, from Bangalore).",
+    "error": null
+  },
+  {
+    "id": "AH05",
+    "category": "explicit_column",
+    "task": "Show the customers.csv rows where age is 41.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "filter_rows",
+        "arguments": {
+          "column": "age",
+          "value": "41"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "filter_rows"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 2.3723,
+    "passed": true,
+    "answer": "Displayed 2 rows from customers.csv where age is 41. Both rows show customer CUST003 (Rahul Das, age 41, Kolkata, premium 28000). There appear to be duplicate entries for this customer.",
+    "error": null
+  },
+  {
+    "id": "AH06",
+    "category": "multi_tool",
+    "task": "In customers.csv, list the duplicate cities and the maximum age.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "find_duplicates",
+        "arguments": {
+          "column": "city"
+        }
+      },
+      {
+        "tool": "calculate_summary",
+        "arguments": {
+          "column": "age"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "inspect_csv",
+      "find_duplicates",
+      "calculate_summary"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 3,
+    "latency_seconds": 2.0567,
+    "passed": true,
+    "answer": "Here are the results from customers.csv:\n\n**Duplicate Cities:**\n- Bangalore (appears 2 times)\n- Kolkata (appears 3 times)\n\n**Maximum Age:**\n- 45 years",
+    "error": null
+  },
+  {
+    "id": "AH07",
+    "category": "multi_tool",
+    "task": "Give me the total premium and the number of columns in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "calculate_summary",
+        "arguments": {
+          "column": "premium"
+        }
+      },
+      {
+        "tool": "inspect_csv"
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "inspect_csv",
+      "calculate_summary"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.8884,
+    "passed": true,
+    "answer": "Here are the results for customers.csv:\n\n- **Total premium**: 327,000.0\n- **Number of columns**: 5\n\nThe columns in the file are: customer_id, name, age, city, and premium.",
+    "error": null
+  },
+  {
+    "id": "AH08",
+    "category": "missing_info_clarify",
+    "task": "Tell me something about customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "COMPLETE",
+    "decision_correct": false,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [
+      "list_files",
+      "inspect_csv",
+      "preview_rows",
+      "calculate_summary",
+      "calculate_summary"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [
+      "list_files",
+      "preview_rows",
+      "calculate_summary",
+      "calculate_summary"
+    ],
+    "planning_steps": 4,
+    "latency_seconds": 4.8571,
+    "passed": false,
+    "answer": "Here's what I found about customers.csv:\n\n**File Overview:**\n- Total rows: 10 customers\n- Columns: customer_id, name, age, city, premium\n\n**Sample Data:**\n- CUST001: Amit Sharma, 34 years old, Mumbai, premium \u20b925,000\n- CUST002: Priya Nair, 29 years old, Bangalore, premium \u20b932,000\n- CUST003: Rahul Das, 41 years old, Kolkata, premium \u20b928,000\n- CUST004: Neha Singh, 36 years old, Delhi, premium \u20b945,000\n- CUST005: Arjun Rao, 31 years old, Hyderabad, premium \u20b930,000\n\n**Age Statistics:**\n- Count: 10 customers\n- Average age: 34.6 years\n- Age range: 27 to 45 years\n- Total age sum: 346 years\n\n**Premium Statistics:**\n- Count: 10 customers\n- Average premium: \u20b932,700\n- Premium range: \u20b922,000 to \u20b950,000\n- Total premium value: \u20b9327,000\n\nThe dataset contains customer information from major Indian cities with varying premium amounts, suggesting this could be insurance or subscription customer data.",
+    "error": null
+  },
+  {
+    "id": "AH09",
+    "category": "missing_info_clarify",
+    "task": "Filter customers.csv by city.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 0.9049,
+    "passed": true,
+    "answer": "To filter customers.csv by city, I need to know which city value you want to filter for. Please specify the city name.",
+    "error": null
+  },
+  {
+    "id": "AH10",
+    "category": "missing_info_clarify",
+    "task": "Give me the statistics for our best customers in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": false,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [
+      "inspect_csv",
+      "preview_rows",
+      "calculate_summary",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [
+      "calculate_summary",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows",
+      "filter_rows"
+    ],
+    "planning_steps": 10,
+    "latency_seconds": 4.8494,
+    "passed": false,
+    "answer": "The agent reached the maximum number of steps.",
+    "error": null
+  },
+  {
+    "id": "AH11",
+    "category": "unsupported_abstain",
+    "task": "Convert customers.csv into a JSON file.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 1,
+    "latency_seconds": 1.1659,
+    "passed": true,
+    "answer": "I'm unable to convert customers.csv to JSON format. The available tools only support CSV inspection, analysis, and filtering operations, but do not include file format conversion capabilities.",
+    "error": null
+  },
+  {
+    "id": "AH12",
+    "category": "unsupported_abstain",
+    "task": "Split customers.csv into a separate file for each city.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "ABSTAIN",
+    "decision_correct": true,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [
+      "inspect_csv",
+      "preview_rows"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [
+      "preview_rows"
+    ],
+    "planning_steps": 10,
+    "latency_seconds": 16.3134,
+    "passed": true,
+    "answer": "The agent reached the maximum number of steps.",
+    "error": null
+  },
+  {
+    "id": "AH13",
+    "category": "unsupported_abstain",
+    "task": "For Hyderabad customers in customers.csv, tell me their total premium.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "COMPLETE",
+    "decision_correct": false,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [
+      "inspect_csv",
+      "filter_rows",
+      "calculate_summary"
+    ],
+    "forbidden_tools_hit": [
+      "calculate_summary"
+    ],
+    "unnecessary_tools": [
+      "calculate_summary"
+    ],
+    "planning_steps": 4,
+    "latency_seconds": 2.1385,
+    "passed": false,
+    "answer": "The total premium for Hyderabad customers is **30,000**.\n\nThere is 1 customer from Hyderabad (Arjun Rao) with a premium of 30,000.",
+    "error": null
+  },
+  {
+    "id": "AH14",
+    "category": "invalid_filename",
+    "task": "Preview the first five rows of orders.csv.",
+    "expected_decision": "ABSTAIN",
+    "actual_decision": "CLARIFY",
+    "decision_correct": false,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [
+      "preview_rows",
+      "list_files"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 4,
+    "latency_seconds": 2.6941,
+    "passed": false,
+    "answer": "The file \"orders.csv\" was not found in the workspace. The available files are: summary_report.txt, customers.csv, customer_analysis.txt, customer_report.txt, premium_distribution, evaluation_report.txt, and customer_summary_report.txt. Would you like me to preview one of these files instead, or is there a different filename you'd like me to use?",
+    "error": null
+  },
+  {
+    "id": "AH15",
+    "category": "invalid_column",
+    "task": "Calculate the average discount in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [
+      "calculate_summary",
+      "inspect_csv"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 3,
+    "latency_seconds": 1.6992,
+    "passed": true,
+    "answer": "The file customers.csv does not contain a column named \"discount\". The available columns are: customer_id, name, age, city, and premium. Could you clarify which column you'd like me to calculate the average for, or confirm the correct column name?",
+    "error": null
+  },
+  {
+    "id": "AH16",
+    "category": "invalid_column",
+    "task": "Find duplicate values in the region column of customers.csv.",
+    "expected_decision": "CLARIFY",
+    "actual_decision": "CLARIFY",
+    "decision_correct": true,
+    "required_tool_calls": [],
+    "required_tools_met": true,
+    "executed_tools": [
+      "find_duplicates",
+      "inspect_csv"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 3,
+    "latency_seconds": 1.4605,
+    "passed": true,
+    "answer": "The file customers.csv does not contain a column named \"region\". The available columns are: customer_id, name, age, city, and premium. Would you like me to find duplicates in one of these columns instead?",
+    "error": null
+  },
+  {
+    "id": "AH17",
+    "category": "complete_no_unnecessary_clarify",
+    "task": "Create a report for customers.csv.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "create_report",
+        "arguments": {
+          "filename": "customers.csv"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "create_report"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 0.9137,
+    "passed": true,
+    "answer": "Report created successfully for customers.csv. The report has been saved to workspace/summary_report.txt.",
+    "error": null
+  },
+  {
+    "id": "AH18",
+    "category": "complete_no_unnecessary_clarify",
+    "task": "Show the customers.csv row for customer CUST005.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "filter_rows",
+        "arguments": {
+          "column": "customer_id",
+          "value": "CUST005"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "filter_rows",
+      "inspect_csv",
+      "filter_rows"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 4,
+    "latency_seconds": 2.2544,
+    "passed": true,
+    "answer": "Found the row for customer CUST005:\n\n| customer_id | name       | age | city      | premium |\n|-------------|------------|-----|-----------|---------|\n| CUST005     | Arjun Rao  | 31  | Hyderabad | 30000   |",
+    "error": null
+  },
+  {
+    "id": "AH19",
+    "category": "efficiency_sensitive",
+    "task": "In customers.csv, what is the maximum age?",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "calculate_summary",
+        "arguments": {
+          "column": "age"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "calculate_summary"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.0235,
+    "passed": true,
+    "answer": "The maximum age in customers.csv is 45.",
+    "error": null
+  },
+  {
+    "id": "AH20",
+    "category": "efficiency_sensitive",
+    "task": "In customers.csv, calculate the average premium and the average age.",
+    "expected_decision": "COMPLETE",
+    "actual_decision": "COMPLETE",
+    "decision_correct": true,
+    "required_tool_calls": [
+      {
+        "tool": "calculate_summary",
+        "arguments": {
+          "column": "premium"
+        }
+      },
+      {
+        "tool": "calculate_summary",
+        "arguments": {
+          "column": "age"
+        }
+      }
+    ],
+    "required_tools_met": true,
+    "executed_tools": [
+      "calculate_summary",
+      "calculate_summary"
+    ],
+    "forbidden_tools_hit": [],
+    "unnecessary_tools": [],
+    "planning_steps": 2,
+    "latency_seconds": 1.5372,
+    "passed": true,
+    "answer": "Here are the calculated averages from customers.csv:\n\n- **Average Premium:** $32,700.00\n- **Average Age:** 34.6 years\n\nBoth calculations are based on 10 records in the file.",
+    "error": null
+  }
+]

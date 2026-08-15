@@ -283,6 +283,56 @@ same suites.
 
 ---
 
+## ActWise V2 Final Evaluation
+
+ActWise V2 — a model-directed single-agent LangGraph system with
+deterministic execution and safety boundaries — was evaluated against a new,
+unseen holdout: **`agentic_holdout_v1`**, `scenarios/agentic_holdout_v1.json`
+(20 scenarios, `tests/run_agentic_holdout_v1.py`).
+
+- This was a **new, unseen** 20-scenario V2 holdout, written specifically to
+  evaluate V2's capability contract and not derived from or overlapping with
+  the V1 scenario files above.
+- It was **executed exactly once** against the frozen Bedrock Mantle
+  (`zai.glm-4.7`) agent.
+- **No backend tuning was performed after seeing the results** — the results
+  below are reported as observed, unmodified.
+- The V1 historical results in the section above are a **separate,
+  architecturally different system** (deterministic fast planner + LLM
+  fallback) and are not presented as V2 scores. The two are not directly
+  comparable.
+
+### Results
+
+| Metric | Result |
+|---|---:|
+| Scenarios | 20 |
+| Task success | 16/20 (80.0%) |
+| Decision accuracy | 16/20 (80.0%) |
+| Required-tool coverage | 20/20 (100.0%) |
+| Unnecessary tool calls | 14 total (0.70 per scenario) |
+| Average agent steps | 3.25 |
+| Average latency | 2.757s |
+| COMPLETE accuracy | 11/11 (100.0%) |
+| CLARIFY accuracy | 3/5 (60.0%) |
+| ABSTAIN accuracy | 2/4 (50.0%) |
+
+Raw per-scenario results: `results/agentic_holdout_v1_results.json`.
+
+### Observed Limitations
+
+1. Open-ended requests may be completed instead of clarified.
+2. Ambiguous filtering requests may trigger unnecessary tool attempts.
+3. Filtered-subset aggregate requests can exceed the current capability
+   boundary.
+4. Missing/nonexistent file cases may produce CLARIFY instead of ABSTAIN.
+
+ActWise V2 is **not** production-ready and is **not** fully autonomous — it
+is a model-directed agent whose decision quality is bounded by the
+underlying model's judgment, evaluated once on a small holdout above.
+
+---
+
 ## Limitations
 
 ActWise V2 is intentionally limited. It currently:

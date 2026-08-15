@@ -1,0 +1,227 @@
+[
+  {
+    "id": "AH01",
+    "category": "direct_single_tool",
+    "task": "What is the minimum premium recorded in customers.csv?",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "calculate_summary", "arguments": { "column": "premium" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["filter_rows", "find_duplicates", "create_report"],
+    "notes": "Single explicit numeric column, unambiguous statistic (minimum), not previously asked in any existing suite."
+  },
+  {
+    "id": "AH02",
+    "category": "direct_single_tool",
+    "task": "List every file currently available in the workspace.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "list_files" }
+    ],
+    "allowed_optional_tools": [],
+    "forbidden_tools": ["inspect_csv", "calculate_summary", "filter_rows", "find_duplicates", "create_report"],
+    "notes": "Trivial single-tool workspace listing task; not used as a primary task in any existing scenario file."
+  },
+  {
+    "id": "AH03",
+    "category": "explicit_column",
+    "task": "Find duplicate values in the city column of customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "find_duplicates", "arguments": { "column": "city" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["filter_rows", "calculate_summary"],
+    "notes": "find_duplicates targeting a non-customer_id column, explicitly named. No existing scenario names a duplicate-check column other than customer_id."
+  },
+  {
+    "id": "AH04",
+    "category": "explicit_column",
+    "task": "Filter customers.csv where premium equals 32000.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "filter_rows", "arguments": { "column": "premium", "value": "32000" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["calculate_summary", "find_duplicates"],
+    "notes": "filter_rows on a numeric-looking column (premium) rather than the city column used by every existing filter scenario."
+  },
+  {
+    "id": "AH05",
+    "category": "explicit_column",
+    "task": "Show the customers.csv rows where age is 41.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "filter_rows", "arguments": { "column": "age", "value": "41" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["calculate_summary", "find_duplicates"],
+    "notes": "filter_rows on the age column with an explicit value; no existing scenario filters on age."
+  },
+  {
+    "id": "AH06",
+    "category": "multi_tool",
+    "task": "In customers.csv, list the duplicate cities and the maximum age.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "find_duplicates", "arguments": { "column": "city" } },
+      { "tool": "calculate_summary", "arguments": { "column": "age" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["filter_rows"],
+    "notes": "Two-part explicit-column request: duplicates on city plus maximum (not average) age."
+  },
+  {
+    "id": "AH07",
+    "category": "multi_tool",
+    "task": "Give me the total premium and the number of columns in customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "calculate_summary", "arguments": { "column": "premium" } },
+      { "tool": "inspect_csv" }
+    ],
+    "allowed_optional_tools": [],
+    "forbidden_tools": ["filter_rows", "find_duplicates"],
+    "notes": "Combines a numeric total with a column-count question (count, not the list of columns as existing scenarios ask)."
+  },
+  {
+    "id": "AH08",
+    "category": "missing_info_clarify",
+    "task": "Tell me something about customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["create_report"],
+    "notes": "Fully open-ended request with no operation implied at all (not specifically an aggregate ask like existing ambiguous-summary scenarios)."
+  },
+  {
+    "id": "AH09",
+    "category": "missing_info_clarify",
+    "task": "Filter customers.csv by city.",
+    "expected_decision": "CLARIFY",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": [],
+    "notes": "Filter column is given (city) but the value is missing -- a partial-information case, distinct from existing fully-unspecified filter scenarios."
+  },
+  {
+    "id": "AH10",
+    "category": "missing_info_clarify",
+    "task": "Give me the statistics for our best customers in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["inspect_csv", "preview_rows"],
+    "forbidden_tools": [],
+    "notes": "Both the selection criterion (\"best\") and the requested statistic are unspecified; no directly executable operation exists."
+  },
+  {
+    "id": "AH11",
+    "category": "unsupported_abstain",
+    "task": "Convert customers.csv into a JSON file.",
+    "expected_decision": "ABSTAIN",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["create_report"],
+    "notes": "No format-conversion tool exists; create_report producing a text file would not satisfy a JSON conversion request."
+  },
+  {
+    "id": "AH12",
+    "category": "unsupported_abstain",
+    "task": "Split customers.csv into a separate file for each city.",
+    "expected_decision": "ABSTAIN",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["inspect_csv", "filter_rows"],
+    "forbidden_tools": ["create_report"],
+    "notes": "No tool can write new per-group files; filter_rows can select rows but cannot persist them as separate files."
+  },
+  {
+    "id": "AH13",
+    "category": "unsupported_abstain",
+    "task": "For Hyderabad customers in customers.csv, tell me their total premium.",
+    "expected_decision": "ABSTAIN",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["inspect_csv", "filter_rows"],
+    "forbidden_tools": ["calculate_summary"],
+    "notes": "calculate_summary always recomputes over the full file and cannot aggregate a filter_rows subset, so any call to it here would silently produce the wrong (whole-file) total presented as if it were the Hyderabad-only figure. This follows directly from the real tool contract, not an arbitrary V1 policy. Fresh city (Hyderabad) and statistic (total, not average) combination versus prior suites."
+  },
+  {
+    "id": "AH14",
+    "category": "invalid_filename",
+    "task": "Preview the first five rows of orders.csv.",
+    "expected_decision": "ABSTAIN",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["preview_rows", "inspect_csv", "list_files"],
+    "forbidden_tools": [],
+    "notes": "orders.csv does not exist in the workspace; no existing missing-file scenario uses a preview request or this filename."
+  },
+  {
+    "id": "AH15",
+    "category": "invalid_column",
+    "task": "Calculate the average discount in customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["calculate_summary", "inspect_csv"],
+    "forbidden_tools": [],
+    "notes": "\"discount\" is not a column in customers.csv and must not be silently mapped to premium or any other existing column."
+  },
+  {
+    "id": "AH16",
+    "category": "invalid_column",
+    "task": "Find duplicate values in the region column of customers.csv.",
+    "expected_decision": "CLARIFY",
+    "required_tool_calls": [],
+    "allowed_optional_tools": ["find_duplicates", "inspect_csv"],
+    "forbidden_tools": [],
+    "notes": "\"region\" is not a column; tests invalid-column handling for find_duplicates rather than calculate_summary, which no existing scenario does."
+  },
+  {
+    "id": "AH17",
+    "category": "complete_no_unnecessary_clarify",
+    "task": "Create a report for customers.csv.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "create_report", "arguments": { "filename": "customers.csv" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": [],
+    "notes": "report_name is optional with a tool-level default; the filename is known, so no clarification is genuinely required. Existing report scenarios always supply an explicit report_name -- this is the complementary case."
+  },
+  {
+    "id": "AH18",
+    "category": "complete_no_unnecessary_clarify",
+    "task": "Show the customers.csv row for customer CUST005.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "filter_rows", "arguments": { "column": "customer_id", "value": "CUST005" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["calculate_summary", "find_duplicates"],
+    "notes": "Filter column and value are both unambiguous even though phrased naturally; no existing scenario filters on customer_id."
+  },
+  {
+    "id": "AH19",
+    "category": "efficiency_sensitive",
+    "task": "In customers.csv, what is the maximum age?",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "calculate_summary", "arguments": { "column": "age" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["filter_rows", "find_duplicates", "create_report"],
+    "notes": "Fully unambiguous single-column, single-statistic request; minimum correct solution is exactly one calculate_summary call. No existing scenario asks for maximum age specifically."
+  },
+  {
+    "id": "AH20",
+    "category": "efficiency_sensitive",
+    "task": "In customers.csv, calculate the average premium and the average age.",
+    "expected_decision": "COMPLETE",
+    "required_tool_calls": [
+      { "tool": "calculate_summary", "arguments": { "column": "premium" } },
+      { "tool": "calculate_summary", "arguments": { "column": "age" } }
+    ],
+    "allowed_optional_tools": ["inspect_csv"],
+    "forbidden_tools": ["filter_rows", "find_duplicates", "create_report"],
+    "notes": "Two explicit, unambiguous columns requiring two calculate_summary calls; minimum useful tool count is exactly two. No existing scenario combines two independent averages in one request."
+  }
+]
