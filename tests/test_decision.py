@@ -1,24 +1,33 @@
+from pydantic import ValidationError
+
 from backend.decision import AgentDecision
 
 
-decisions = [
-    AgentDecision(
-        decision="CONTINUE",
-        reason="The premium summary is still required.",
-    ),
-    AgentDecision(
-        decision="COMPLETE",
-        reason="Duplicate IDs and average premium are available.",
-    ),
-    AgentDecision(
-        decision="CLARIFY",
-        reason="The user did not specify which column to analyze.",
-    ),
-    AgentDecision(
-        decision="ABSTAIN",
-        reason="The requested file does not exist in the workspace.",
-    ),
-]
+VALID_DECISIONS = ["CONTINUE", "COMPLETE", "CLARIFY", "ABSTAIN"]
 
-for item in decisions:
-    print(item.model_dump())
+
+for decision in VALID_DECISIONS:
+    item = AgentDecision(
+        decision=decision,
+        reason="A representative reason for this decision.",
+    )
+
+    assert item.decision == decision
+    assert item.reason == "A representative reason for this decision."
+
+print(f"All {len(VALID_DECISIONS)} valid decisions accepted.")
+
+
+try:
+    AgentDecision(
+        decision="INVALID",
+        reason="This decision value does not exist.",
+    )
+except ValidationError:
+    pass
+else:
+    raise AssertionError(
+        "AgentDecision accepted an invalid decision value."
+    )
+
+print("Invalid decision value correctly rejected.")
