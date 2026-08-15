@@ -215,8 +215,8 @@ actwise-agent/
 │   ├── tools.py           # 7 local CSV tools
 │   └── decision.py        # Decision/tool-decision models
 │
-├── scenarios/              # V1 benchmark scenario definitions (preserved)
-├── results/                 # V1 benchmark results (preserved, historical)
+├── scenarios/              # Historical V1 suites + V2 final holdout
+├── results/                 # Historical V1 results + V2 diagnostic/final results
 ├── tests/
 ├── workspace/              # Sample CSV data
 ├── data/                    # SQLite checkpoint database
