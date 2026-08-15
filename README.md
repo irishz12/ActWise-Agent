@@ -132,7 +132,7 @@ There is no Groq, Cerebras, or Gemini dependency in the runtime.
 
 ## Tool Layer
 
-ActWise exposes seven local tools, unchanged from V1:
+V2 retains the same seven business-tool categories:
 
 | Tool | Purpose |
 |---|---|
@@ -213,7 +213,6 @@ actwise-agent/
 │   ├── graph_agent.py     # LangGraph: agent / tools / clarify nodes
 │   ├── llm.py             # Bedrock Mantle OpenAI-compatible client config
 │   ├── tools.py           # 7 local CSV tools
-│   ├── state.py           # Agent state type
 │   └── decision.py        # Decision/tool-decision models
 │
 ├── scenarios/              # V1 benchmark scenario definitions (preserved)
@@ -261,8 +260,12 @@ npm run dev
 The scores below were produced by **ActWise V1**, which used a deterministic
 fast planner with keyword/regex intent detection and an LLM fallback (Groq,
 `gpt-oss-20b`/`gpt-oss-120b`). They are kept here as a historical record of
-that architecture and **have not been reproduced against V2**. V2 has not
-yet been run against the full benchmark suite.
+that architecture, clearly separate from V2.
+
+ActWise V2 was subsequently run **once** against these same six historical
+suites as regression diagnostics (not a release gate). The V2 results are
+saved separately as `results/v2_*.json` files and are not merged into or
+presented as the V1 scores below.
 
 | Evaluation (V1) | Scenarios | Success |
 |---|---:|---:|
@@ -277,9 +280,9 @@ yet been run against the full benchmark suite.
 `evaluation_v2.json`, not the ActWise V2 architecture described in this
 document.)
 
-Full scenario definitions remain in `scenarios/` and raw results in
-`results/`, unmodified, for future comparison once V2 is run against the
-same suites.
+Full scenario definitions remain in `scenarios/`, unmodified. The original
+V1 results in `results/` and the new V2 diagnostic results in
+`results/v2_*.json` are both preserved as-is.
 
 ---
 
@@ -348,5 +351,7 @@ ActWise V2 is intentionally limited. It currently:
   — decision quality is bounded by model behavior, not by deterministic
   rules, and has shown some non-determinism at `temperature=0` in manual
   testing
-- has not yet been evaluated against the full V1 benchmark suite; V1 scores
-  above are historical and do not describe V2 behavior
+- has been run once against the six historical V1 benchmark suites as
+  regression diagnostics only (see `results/v2_*.json`), not as a release
+  gate; the V1 scores above remain historical and describe the V1
+  architecture, not V2

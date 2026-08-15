@@ -1,25 +1,17 @@
-.env
-.venv/
-__pycache__/
-*.pyc
-.DS_Store
-workspace/*.txt
-
-data/*.db
-data/*.db-*
-
 # Environment
 .env
-.venv/
-venv/
 
 # Python
+.venv/
+venv/
 __pycache__/
+*.pyc
 *.py[cod]
 .pytest_cache/
 
 # Local database
 data/*.db
+data/*.db-*
 
 # Node
 node_modules/
@@ -29,11 +21,6 @@ web/dist/
 # macOS
 .DS_Store
 
-# Other frontend project - not part of ActWise
-/frontend/
-
-# Local development experiments
-tests/debug_clarify_path.py
-tests/test_cerebras.py
-tests/test_gemini.py
-.env
+# Workspace: keep the sample dataset, ignore generated report/output files
+workspace/*
+!workspace/customers.csv
