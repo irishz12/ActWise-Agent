@@ -11,6 +11,23 @@ also **whether it should act at all** — choosing explicitly between:
 - `CLARIFY` — required information is missing or ambiguous
 - `ABSTAIN` — the task cannot be completed reliably with the available tools
 
+## V2 Evaluation Snapshot
+
+Evaluated once on a new, unseen 20-scenario holdout using the frozen
+`zai.glm-4.7` Bedrock Mantle agent, with no backend tuning after seeing the
+results.
+
+| Metric | Result |
+|---|---:|
+| Task success | **16/20 (80.0%)** |
+| Decision accuracy | **16/20 (80.0%)** |
+| Required-tool coverage | **20/20 (100.0%)** |
+| Average agent steps | **3.25** |
+| Average latency | **2.757s** |
+
+The full evaluation methodology, per-decision accuracy, observed limitations,
+and raw results are documented below.
+
 ---
 
 ## Problem Statement
