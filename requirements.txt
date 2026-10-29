@@ -4,4 +4,4 @@ pydantic==2.13.4
 python-dotenv==1.2.2
 openai==3.0.0
 langgraph==1.2.10
-langgraph-checkpoint-sqlite==3.1.1
+langgraph-checkpoint-sqlite==3.1.2
